@@ -53,3 +53,13 @@ CREATE TABLE auth_cas(
     renew CHAR(1)
 );
 success!
+timestamp: 2017-03-29T17:21:34.203474
+CREATE TABLE category(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(128) NOT NULL UNIQUE,
+    description TEXT
+);
+success!
+timestamp: 2017-03-29T17:25:56.102952
+ALTER TABLE category ADD picture CHAR(512);
+success!
