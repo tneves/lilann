@@ -29,7 +29,9 @@ db.define_table("product",
     Field("unit_price", "double"),
     Field("total_price", "double"), # computed fields
     # campo virtual tax_price
-
+    Field("picture", "upload"),
+    Field("thumbnail", "upload"),
+    Field("barcode", "string")
 )
 
 origins = {"BR": 1.0, "JP": 1.2, "EUA": 1.8, "UK": 1.5}

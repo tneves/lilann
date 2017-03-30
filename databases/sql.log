@@ -63,3 +63,18 @@ success!
 timestamp: 2017-03-29T17:25:56.102952
 ALTER TABLE category ADD picture CHAR(512);
 success!
+timestamp: 2017-03-30T12:52:21.202092
+CREATE TABLE product(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name CHAR(512) NOT NULL,
+    category INTEGER REFERENCES category (id) ON DELETE CASCADE  ,
+    description TEXT,
+    qtd INTEGER NOT NULL,
+    origin CHAR(512),
+    unit_price DOUBLE,
+    total_price DOUBLE,
+    picture CHAR(512),
+    thumbnail CHAR(512),
+    barcode CHAR(512)
+);
+success!
